@@ -43,9 +43,10 @@ export const useCartStore = create((set, get) => ({
 			toast.error(error.response.data.message || "An error occurred");
 		}
 	},
-	clearCart: () => {
-		set({ cart: [], coupon: null, total: 0, subtotal: 0 });
-		localStorage.removeItem("cart");
+	clearCart: async () => {
+		await axios.delete("/cart"); // Эндпоинт на сервере для очистки всей корзины
+		set(() => ({ cart: [], coupon: null, total: 0, subtotal: 0 })); // Обновляем Zustand
+		get().calculateTotals(); // Пересчитываем тоталы
 	},
 	
 	
