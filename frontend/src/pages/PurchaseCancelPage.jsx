@@ -17,11 +17,11 @@ const PurchaseCancelPage = () => {
 					</div>
 					<h1 className='text-2xl sm:text-3xl font-bold text-center text-red-500 mb-2'>Purchase Cancelled</h1>
 					<p className='text-gray-300 text-center mb-6'>
-						Text
+						Your purchase has been cancelled.
 					</p>
 					<div className='bg-gray-700 rounded-lg p-4 mb-6'>
 						<p className='text-sm text-gray-400 text-center'>
-							Text
+							Please check your payment method and try again.
 						</p>
 					</div>
 					<div className='space-y-4'>
