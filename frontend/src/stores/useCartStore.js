@@ -45,7 +45,9 @@ export const useCartStore = create((set, get) => ({
 	},
 	clearCart: () => {
 		set({ cart: [], coupon: null, total: 0, subtotal: 0 });
+		localStorage.removeItem("cart");
 	},
+	
 	
 	addToCart: async (product) => {
 		try {
